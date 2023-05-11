@@ -1,0 +1,9 @@
+<kendo-grid [data]="gridData">
+    <kendo-grid-column field="name" title="Name"></kendo-grid-column>
+    <kendo-grid-column field="age" title="Age"></kendo-grid-column>
+    <kendo-grid-column field="hobbies" title="Hobbies" [filterable]="false">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            {{ dataItem.hobbies.join(', ') }}
+        </ng-template>
+    </kendo-grid-column>
+</kendo-grid>

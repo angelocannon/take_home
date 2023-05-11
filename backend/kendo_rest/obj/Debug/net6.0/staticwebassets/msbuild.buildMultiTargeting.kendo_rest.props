@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\kendo_rest.props" />
+</Project>
