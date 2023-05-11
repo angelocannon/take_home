@@ -1,7 +1,8 @@
+<input type="text" [(ngModel)]="filterValue" (input)="applyFilter()" placeholder="Filter">
 <kendo-grid [data]="gridData">
     <kendo-grid-column field="name" title="Name"></kendo-grid-column>
     <kendo-grid-column field="age" title="Age"></kendo-grid-column>
-    <kendo-grid-column field="hobbies" title="Hobbies" [filterable]="false">
+    <kendo-grid-column field="hobbies" title="Hobbies">
         <ng-template kendoGridCellTemplate let-dataItem>
             {{ dataItem.hobbies.join(', ') }}
         </ng-template>
